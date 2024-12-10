@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --text-primary: rgb(28, 28, 28);
+  --text-secondary: rgb(235, 234, 229);
+  --accent: hsl(254, 100%, 61%);
+  --accent-2: hsl(254, 97%, 55%);
+}
+
+body {
+  background: rgb(12, 12, 12);
+}
