@@ -2,36 +2,53 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FaHome, FaBriefcase, FaComment } from "react-icons/fa";
 
-const Nav = () => {
+const navItems = [
+  {
+    path: "/",
+    icon: <FaHome />,
+    label: "Home",
+  },
+  {
+    path: "/projects",
+    icon: <FaBriefcase />,
+    label: "Projects",
+  },
+  {
+    path: "/contact",
+    icon: <FaComment />,
+    label: "Contact",
+  },
+];
+
+const Nav = ({ isMobile = false, onLinkClick }) => {
   return (
-    <nav>
-      <ul className="flex items-center justify-center gap-3">
-        <li className="rounded-lg bg-accent hover:bg-accentTwo transition-all duration-300 ease-linear">
+    <ul
+      className={`
+        flex 
+        ${isMobile ? "flex-col space-y-4" : "flex-row items-center space-x-6"}
+      `}
+    >
+      {navItems.map((item) => (
+        <li key={item.path} className="flex items-center justify-center">
           <Link
-            to="/"
-            className="text-xs md:text-sm lg:text-base py-2 px-3 flex items-center justify-center gap-2"
+            to={item.path}
+            onClick={onLinkClick}
+            className="
+              text-xs md:text-sm lg:text-base 
+              w-28
+              py-2 px-3 
+              flex items-center gap-2 
+              rounded-lg 
+              bg-accent hover:bg-accentTwo 
+              transition-all duration-300 ease-linear
+              focus:outline-none focus:ring-2 focus:ring-accent focus:ring-opacity-50
+            "
           >
-            <FaHome /> Home
+            {item.icon} {item.label}
           </Link>
         </li>
-        <li className="rounded-lg bg-accent hover:bg-accentTwo transition-all duration-300 ease-linear">
-          <Link
-            to="/projects"
-            className="text-xs md:text-sm lg:text-base py-2 px-3 flex items-center justify-center gap-2"
-          >
-            <FaBriefcase /> Projects
-          </Link>
-        </li>
-        <li className="rounded-lg bg-accent hover:bg-accentTwo transition-all duration-300 ease-linear">
-          <Link
-            to="/contact"
-            className="text-xs md:text-sm lg:text-base py-2 px-3 flex items-center justify-center gap-2"
-          >
-            <FaComment /> Contact
-          </Link>
-        </li>
-      </ul>
-    </nav>
+      ))}
+    </ul>
   );
 };
 

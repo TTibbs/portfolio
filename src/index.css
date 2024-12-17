@@ -1,14 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --text-primary: rgb(28, 28, 28);
-  --text-secondary: rgb(235, 234, 229);
-  --accent: hsl(254, 100%, 61%);
-  --accent-2: hsl(254, 97%, 55%);
+  --text-primary: rgb(18, 18, 18);
+  --text-secondary: rgb(245, 245, 245);
+  --bg-primary: rgb(219, 219, 219);
+  --bg-secondary: rgb(30, 30, 30);
+  --accent: hsl(254, 80%, 60%);
+  --accent-2: hsl(254, 80%, 52%);
 }
 
 body {
+  font-family: "Montserrat", sans-serif;
   background: rgb(12, 12, 12);
 }
