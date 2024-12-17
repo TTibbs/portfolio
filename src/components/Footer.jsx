@@ -11,7 +11,7 @@ const Footer = () => {
         </p>
         <div className="flex">
           <Link
-            to="mailto:your-email@example.com"
+            to="mailto:tward5824@gmail.com"
             className="text-xs md:text-sm lg:text-base py-2 px-3 rounded-lg bg-accent hover:bg-accentTwo transition-all duration-300 ease-linear flex items-center justify-center gap-2"
           >
             <MdAlternateEmail /> Email Me
