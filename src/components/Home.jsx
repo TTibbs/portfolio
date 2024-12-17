@@ -110,7 +110,7 @@ const Home = () => {
           </div>
           <div className="flex flex-col gap-4 border-2 bg-bgPrimary dark:bg-bgSecondary border-accent w-full lg:w-[35%] rounded-xl py-14 px-5 items-center text-textPrimary dark:text-textSecondary">
             <img
-              src="/src/assets/tward.jpg"
+              src="/tward.jpg"
               alt="Terry Ward"
               className="w-44 h-48 md:w-60 md:h-60 rounded-full border-4 border-accent"
             />
