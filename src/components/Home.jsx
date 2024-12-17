@@ -120,7 +120,7 @@ const Home = () => {
             </p>
             <div className="flex space-x-4 mt-5">
               <Link
-                to="https://github.com/your-github"
+                to="https://github.com/TTibbs"
                 className="hover:text-accentTwo"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -128,7 +128,7 @@ const Home = () => {
                 <FaGithub size={35} />
               </Link>
               <Link
-                to="https://linkedin.com/in/your-linkedin"
+                to="https://www.linkedin.com/in/terry-www/"
                 className="hover:text-accentTwo"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -136,7 +136,7 @@ const Home = () => {
                 <FaLinkedin size={35} />
               </Link>
               <Link
-                to="https://codewars.com/users/your-codewars"
+                to="https://www.codewars.com/users/TTibbs"
                 className="hover:text-accentTwo"
                 target="_blank"
                 rel="noopener noreferrer"
