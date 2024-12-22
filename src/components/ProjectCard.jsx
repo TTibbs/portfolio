@@ -2,29 +2,34 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const TECH_COLORS = {
+  Solidity: "border-purple-600",
   React: "border-cyan-500",
   JavaScript: "border-yellow-500",
-  TypeScript: "border-blue-500",
-  Node: "border-green-500",
-  Python: "border-blue-600",
-  Django: "border-green-700",
-  NextJS: "border-black",
   TailwindCSS: "border-blue-400",
-  Redux: "border-purple-500",
-  GraphQL: "border-pink-500",
-  Firebase: "border-orange-500",
-  MongoDB: "border-green-600",
-  Solidity: "border-purple-600",
-  Blockchain: "border-gray-700",
-  Web3: "border-indigo-500",
-  MetaMask: "border-orange-600",
+  Node: "border-green-500",
   Express: "border-gray-500",
   PostgreSQL: "border-blue-700",
+  Supabase: "border-green-400",
+  Jest: "border-green-600",
+  Supertest: "border-red-500",
+  "React Context": "border-cyan-400",
+  Axios: "border-blue-500",
   "React Native": "border-teal-500",
   Expo: "border-indigo-600",
+  Redux: "border-purple-500",
+  NativeWind: "border-blue-500",
+  TypeScript: "border-blue-500",
+  Remix: "border-black",
+  Netlify: "border-teal-600",
+  Render: "border-indigo-500",
+  "Visual Studio Code": "border-blue-600",
+  Git: "border-orange-500",
+  GitHub: "border-gray-800",
+  Vercel: "border-black",
 };
 
 const ProjectCard = ({ project }) => {
+  console.log(project?.technologies);
   return (
     <div className="flex flex-col gap-2 h-full shadow-lg shadow-accent bg-bgPrimary dark:bg-bgSecondary border-2 border-accent rounded-lg p-4 hover:shadow-accentTwo transition-all duration-300 ease-linear">
       <h3 className="text-xl text-textPrimary dark:text-textSecondary font-semibold">
@@ -61,7 +66,7 @@ const ProjectCard = ({ project }) => {
             <span
               key={tech}
               className={`
-                px-2 py-1 text-xs rounded-full 
+                py-1 px-2 text-xs rounded-full 
                 border 
                 ${TECH_COLORS[tech] || "border-gray-500"}
                 text-textPrimary dark:text-textSecondary

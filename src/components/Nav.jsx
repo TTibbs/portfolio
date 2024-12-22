@@ -34,17 +34,17 @@ const Nav = ({ isMobile = false, onLinkClick }) => {
             to={item.path}
             onClick={onLinkClick}
             className="
-              text-xs md:text-sm lg:text-base 
+              text-sm md:text-base lg:text-lg 
               w-28
               py-2 px-3 
-              flex items-center gap-2 
+              flex items-center justify-center gap-2 
               rounded-lg 
               bg-accent hover:bg-accentTwo 
               transition-all duration-300 ease-linear
               focus:outline-none focus:ring-2 focus:ring-accent focus:ring-opacity-50
             "
           >
-            {item.icon} {item.label}
+            <span className="text-lg">{item.icon}</span> {item.label}
           </Link>
         </li>
       ))}
