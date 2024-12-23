@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ProjectCard from "./ProjectCard";
 import { fetchProjects } from "../utils/api";
+import Loading from "./Loading";
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
@@ -15,7 +16,6 @@ const Projects = () => {
         setError(null);
       })
       .catch((err) => {
-        console.log(err);
         setError(err);
       })
       .finally(() => {
@@ -24,11 +24,7 @@ const Projects = () => {
   }, []);
 
   if (loading) {
-    return (
-      <p className="text-zinc-200 text-3xl min-h-screen grid place-items-center">
-        Loading...
-      </p>
-    );
+    return <Loading loading={loading}></Loading>;
   }
 
   return (

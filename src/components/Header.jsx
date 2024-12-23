@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { FaBars, FaTimes, FaDownload } from "react-icons/fa";
+import { Link, useNavigate } from "react-router-dom";
+import { FaBars, FaTimes } from "react-icons/fa";
 import Nav from "./Nav";
 import ThemeToggle from "./ThemeToggle";
 
@@ -38,13 +38,13 @@ const Header = () => {
           <Nav />
         </nav>
         <div className="hidden md:flex items-center space-x-4">
-          <button
-            className="text-xs md:text-sm lg:text-base py-2 px-3 flex items-center gap-2 rounded-lg bg-accent hover:bg-accentTwo transition-all duration-300 ease-linear focus:outline-none focus:ring-2 focus:ring-accent focus:ring-opacity-50"
-            onClick={handleDownload}
+          <Link
+            to="https://drive.google.com/uc?id=140lK9SqaLQcZr3kTKK1WxfdE8ZX7x-IE&export=download"
+            className="text-xs md:text-sm lg:text-base py-2 px-3 rounded-lg bg-accent hover:bg-accentTwo transition-all duration-300 ease-linear focus:outline-none focus:ring-2 focus:ring-accent focus:ring-opacity-50"
             aria-label="Download Resume"
           >
-            Resume <FaDownload />
-          </button>
+            Resume
+          </Link>
           <ThemeToggle />
         </div>
         <button
@@ -58,16 +58,17 @@ const Header = () => {
         </button>
       </div>
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-zinc-800 text-zinc-100 absolute top-full left-0 w-fullpy-4 px-4 shadow-lg">
+        <div className="md:hidden bg-zinc-800 text-zinc-100 absolute top-full left-0 w-full py-4 px-4 shadow-lg">
           <Nav isMobile={true} onLinkClick={closeMobileMenu} />
           <div className="flex justify-between items-center mt-4">
-            <button
+            <Link
+              to="https://drive.google.com/uc?id=140lK9SqaLQcZr3kTKK1WxfdE8ZX7x-IE&export=download"
               className="text-xs md:text-sm lg:text-base py-2 px-3 flex items-center gap-2 rounded-lg bg-accent hover:bg-accentTwo transition-all duration-300 ease-linear"
               onClick={handleDownload}
               aria-label="Download Resume"
             >
-              Resume <FaDownload />
-            </button>
+              Resume
+            </Link>
             <ThemeToggle />
           </div>
         </div>

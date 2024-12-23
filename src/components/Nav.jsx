@@ -1,21 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaHome, FaBriefcase, FaComment } from "react-icons/fa";
 
 const navItems = [
   {
     path: "/",
-    icon: <FaHome />,
     label: "Home",
   },
   {
     path: "/projects",
-    icon: <FaBriefcase />,
     label: "Projects",
   },
   {
     path: "/contact",
-    icon: <FaComment />,
     label: "Contact",
   },
 ];
@@ -37,14 +33,14 @@ const Nav = ({ isMobile = false, onLinkClick }) => {
               text-sm md:text-base lg:text-lg 
               w-28
               py-2 px-3 
-              flex items-center justify-center gap-2 
+              flex items-center justify-center
               rounded-lg 
               bg-accent hover:bg-accentTwo 
               transition-all duration-300 ease-linear
               focus:outline-none focus:ring-2 focus:ring-accent focus:ring-opacity-50
             "
           >
-            <span className="text-lg">{item.icon}</span> {item.label}
+            {item.label}
           </Link>
         </li>
       ))}

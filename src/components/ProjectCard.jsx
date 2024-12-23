@@ -29,7 +29,6 @@ const TECH_COLORS = {
 };
 
 const ProjectCard = ({ project }) => {
-  console.log(project?.technologies);
   return (
     <div className="flex flex-col gap-2 h-full shadow-lg shadow-accent bg-bgPrimary dark:bg-bgSecondary border-2 border-accent rounded-lg p-4 hover:shadow-accentTwo transition-all duration-300 ease-linear">
       <h3 className="text-xl text-textPrimary dark:text-textSecondary font-semibold">
@@ -65,13 +64,11 @@ const ProjectCard = ({ project }) => {
           {project.technologies.map((tech) => (
             <span
               key={tech}
-              className={`
-                py-1 px-2 text-xs rounded-full 
-                border 
-                ${TECH_COLORS[tech] || "border-gray-500"}
-                text-textPrimary dark:text-textSecondary
-              `}
+              className={`py-1 px-2 text-xs rounded-full border ${
+                TECH_COLORS[tech] || "border-gray-500"
+              } text-textPrimary dark:text-textSecondary`}
             >
+              {" "}
               {tech}
             </span>
           ))}
