@@ -58,10 +58,30 @@ const ProjectCard = ({ project }) => {
             GitHub
           </Link>
         )}
+        {project.github_urls && (
+          <>
+            <Link
+              to={project.github_urls.frontend}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-textPrimary dark:text-textSecondary py-2 px-3 rounded-lg border-2 border-accent hover:text-textSecondary hover:border-accentTwo hover:bg-accentTwo transition-all duration-300 ease-linear mr-4"
+            >
+              Frontend
+            </Link>
+            <Link
+              to={project.github_urls.backend}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-textPrimary dark:text-textSecondary py-2 px-3 rounded-lg border-2 border-accent hover:text-textSecondary hover:border-accentTwo hover:bg-accentTwo transition-all duration-300 ease-linear"
+            >
+              Backend
+            </Link>
+          </>
+        )}
       </div>
       {project.technologies && (
         <div className="mt-auto flex flex-wrap gap-2 pt-4">
-          {project.technologies?.map((tech) => (
+          {project.technologies.map((tech) => (
             <span
               key={tech}
               className={`py-1 px-2 text-xs rounded-full border ${

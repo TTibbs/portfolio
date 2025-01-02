@@ -8,6 +8,7 @@ export const fetchProjects = () => {
   return api
     .get("/projects")
     .then((response) => {
+      console.log(response);
       return response;
     })
     .catch((err) => {
