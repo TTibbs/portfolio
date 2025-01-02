@@ -38,7 +38,7 @@ const ProjectCard = ({ project }) => {
         {project.description}
       </p>
       <div className="mt-4">
-        {project.live_url && (
+        {project?.live_url && (
           <Link
             to={project.live_url}
             target="_blank"
@@ -61,7 +61,7 @@ const ProjectCard = ({ project }) => {
       </div>
       {project.technologies && (
         <div className="mt-auto flex flex-wrap gap-2 pt-4">
-          {project.technologies.map((tech) => (
+          {project.technologies?.map((tech) => (
             <span
               key={tech}
               className={`py-1 px-2 text-xs rounded-full border ${
