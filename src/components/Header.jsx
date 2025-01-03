@@ -10,7 +10,8 @@ const Header = () => {
 
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/TerryWard.CV.pdf";
+    link.href =
+      "https://drive.google.com/uc?export=download&id=137DZr6c1XGrL4jZvDe4FhARX180spy8n";
     link.download = "Terry_Ward_CV.pdf";
     document.body.appendChild(link);
     link.click();
@@ -39,8 +40,9 @@ const Header = () => {
         </nav>
         <div className="hidden md:flex items-center space-x-4">
           <Link
-            to="https://drive.google.com/uc?id=140lK9SqaLQcZr3kTKK1WxfdE8ZX7x-IE&export=download"
-            className="text-xs md:text-sm lg:text-base py-2 px-3 rounded-lg bg-accent hover:bg-accentTwo transition-all duration-300 ease-linear focus:outline-none focus:ring-2 focus:ring-accent focus:ring-opacity-50"
+            to="#"
+            onClick={handleDownload}
+            className="text-xs md:text-sm lg:text-base py-2 px-3 rounded-lg bg-accent hover:bg-accentTwo transition-all duration-300 ease-linear"
             aria-label="Download Resume"
           >
             Resume
@@ -62,9 +64,9 @@ const Header = () => {
           <Nav isMobile={true} onLinkClick={closeMobileMenu} />
           <div className="flex justify-between items-center mt-4">
             <Link
-              to="https://drive.google.com/uc?id=140lK9SqaLQcZr3kTKK1WxfdE8ZX7x-IE&export=download"
-              className="text-xs md:text-sm lg:text-base py-2 px-3 flex items-center gap-2 rounded-lg bg-accent hover:bg-accentTwo transition-all duration-300 ease-linear"
+              to="#"
               onClick={handleDownload}
+              className="text-xs md:text-sm lg:text-base py-2 px-3 rounded-lg bg-accent hover:bg-accentTwo transition-all duration-300 ease-linear"
               aria-label="Download Resume"
             >
               Resume
