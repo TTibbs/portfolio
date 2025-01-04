@@ -30,7 +30,7 @@ const TECH_COLORS = {
 
 const ProjectCard = ({ project }) => {
   return (
-    <div className="flex flex-col gap-2 h-full shadow-lg shadow-accent bg-bgPrimary dark:bg-bgSecondary border-2 border-accent rounded-lg p-4 hover:shadow-accentTwo transition-all duration-300 ease-linear">
+    <div className="flex flex-col gap-2 shadow-lg shadow-accent bg-bgPrimary dark:bg-bgSecondary border-2 border-accent rounded-lg p-4 hover:shadow-accentTwo transition-all duration-300 ease-linear h-full min-h-[250px]">
       <h3 className="text-xl text-textPrimary dark:text-textSecondary font-semibold">
         {project.name}
       </h3>
@@ -80,7 +80,7 @@ const ProjectCard = ({ project }) => {
         )}
       </div>
       {project.technologies && (
-        <div className="mt-auto flex flex-wrap gap-2 pt-4">
+        <div className="flex flex-wrap gap-2 pt-4">
           {project.technologies.map((tech) => (
             <span
               key={tech}
