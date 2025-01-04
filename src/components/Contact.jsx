@@ -31,15 +31,15 @@ const Contact = () => {
 
     if (response.ok) {
       setStatus("Message sent successfully!");
-      setFormData(formData);
+      setFormData({ name: "", email: "", message: "" });
     } else {
       setStatus("Failed to send message. Please try again later.");
     }
   };
 
   return (
-    <section className="mt-32 mb-10 flex items-center justify-center">
-      <div className="w-full max-w-md p-8 space-y-6 rounded-lg border-2 border-accent shadow-md shadow-accent">
+    <section className="my-7 flex items-center justify-center" id="contact">
+      <div className="w-full max-w-md bg-bgPrimary dark:bg-bgSecondary p-8 space-y-6 rounded-lg border-2 border-accent shadow-md shadow-accent transition-all duration-300 ease-linear">
         <h2 className="text-2xl font-bold text-center text-accent">
           Contact Me
         </h2>
@@ -47,7 +47,7 @@ const Contact = () => {
           <div>
             <label
               htmlFor="name"
-              className="block text-sm font-medium text-zinc-200"
+              className="block text-sm font-medium text-zinc-800 dark:text-zinc-200"
             >
               Name
             </label>
@@ -58,13 +58,13 @@ const Contact = () => {
               value={formData.name}
               onChange={handleChange}
               required
-              className="mt-1 block w-full px-3 py-2 bg-white text-textPrimary dark:text-textSecondary dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-accent focus:border-accent"
+              className="mt-1 block w-full px-3 py-2 bg-white text-textPrimary border-2 border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-accent focus:border-accent"
             />
           </div>
           <div>
             <label
               htmlFor="email"
-              className="block text-sm font-medium text-zinc-200"
+              className="block text-sm font-medium text-zinc-800 dark:text-zinc-200"
             >
               Email
             </label>
@@ -75,13 +75,13 @@ const Contact = () => {
               value={formData.email}
               onChange={handleChange}
               required
-              className="mt-1 block w-full px-3 py-2 bg-white text-textPrimary dark:text-textSecondary dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-accent focus:border-accent"
+              className="mt-1 block w-full px-3 py-2 bg-white text-textPrimary border-2 border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-accent focus:border-accent"
             />
           </div>
           <div>
             <label
               htmlFor="message"
-              className="block text-sm font-medium text-zinc-200"
+              className="block text-sm font-medium text-zinc-800 dark:text-zinc-200"
             >
               Message
             </label>
@@ -92,7 +92,7 @@ const Contact = () => {
               onChange={handleChange}
               required
               rows="4"
-              className="mt-1 block w-full px-3 py-2 bg-white text-textPrimary dark:text-textSecondary dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-accent focus:border-accent"
+              className="mt-1 block w-full px-3 py-2 bg-white text-textPrimary border-2 border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-accent focus:border-accent"
             ></textarea>
           </div>
           <div className="flex items-center justify-center">

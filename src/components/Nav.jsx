@@ -1,17 +1,16 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 const navItems = [
   {
-    path: "/",
+    path: "#home",
     label: "Home",
   },
   {
-    path: "/projects",
+    path: "#projects",
     label: "Projects",
   },
   {
-    path: "/contact",
+    path: "#contact",
     label: "Contact",
   },
 ];
@@ -26,8 +25,8 @@ const Nav = ({ isMobile = false, onLinkClick }) => {
     >
       {navItems.map((item) => (
         <li key={item.path} className="flex items-center justify-center">
-          <Link
-            to={item.path}
+          <a
+            href={item.path}
             onClick={onLinkClick}
             className="
               text-sm md:text-base lg:text-lg 
@@ -41,7 +40,7 @@ const Nav = ({ isMobile = false, onLinkClick }) => {
             "
           >
             {item.label}
-          </Link>
+          </a>
         </li>
       ))}
     </ul>

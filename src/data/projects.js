@@ -6,7 +6,7 @@ const projectData = [
     github_url: "https://github.com/TTibbs/Student-Counter",
     live_url: null,
     created_at: "2023-04-19T19:36:00Z",
-    technologies: ["Solidity", "Blockchain", "Web3"],
+    technologies: ["Solidity", "EVM", "Web3", "Remix IDE"],
   },
   {
     name: "MetaMask Wallet Integration",

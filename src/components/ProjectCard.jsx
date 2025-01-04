@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 const TECH_COLORS = {
   Solidity: "border-purple-600",
@@ -39,43 +38,43 @@ const ProjectCard = ({ project }) => {
       </p>
       <div className="mt-4">
         {project?.live_url && (
-          <Link
-            to={project.live_url}
+          <a
+            href={project.live_url}
             target="_blank"
             rel="noopener noreferrer"
             className="text-textPrimary dark:text-textSecondary py-2 px-3 rounded-lg border-2 border-accent hover:text-textSecondary hover:border-accentTwo hover:bg-accentTwo transition-all duration-300 ease-linear mr-4"
           >
             Live Project
-          </Link>
+          </a>
         )}
         {project.github_url && (
-          <Link
-            to={project.github_url}
+          <a
+            href={project.github_url}
             target="_blank"
             rel="noopener noreferrer"
             className="text-textPrimary dark:text-textSecondary py-2 px-3 rounded-lg border-2 border-accent hover:text-textSecondary hover:border-accentTwo hover:bg-accentTwo transition-all duration-300 ease-linear"
           >
             GitHub
-          </Link>
+          </a>
         )}
         {project.github_urls && (
           <>
-            <Link
-              to={project.github_urls.frontend}
+            <a
+              href={project.github_urls.frontend}
               target="_blank"
               rel="noopener noreferrer"
               className="text-textPrimary dark:text-textSecondary py-2 px-3 rounded-lg border-2 border-accent hover:text-textSecondary hover:border-accentTwo hover:bg-accentTwo transition-all duration-300 ease-linear mr-4"
             >
               Frontend
-            </Link>
-            <Link
-              to={project.github_urls.backend}
+            </a>
+            <a
+              href={project.github_urls.backend}
               target="_blank"
               rel="noopener noreferrer"
               className="text-textPrimary dark:text-textSecondary py-2 px-3 rounded-lg border-2 border-accent hover:text-textSecondary hover:border-accentTwo hover:bg-accentTwo transition-all duration-300 ease-linear"
             >
               Backend
-            </Link>
+            </a>
           </>
         )}
       </div>
@@ -84,9 +83,7 @@ const ProjectCard = ({ project }) => {
           {project.technologies.map((tech) => (
             <span
               key={tech}
-              className={`py-1 px-2 text-xs rounded-full border ${
-                TECH_COLORS[tech] || "border-gray-500"
-              } text-textPrimary dark:text-textSecondary`}
+              className={`py-1 px-2 text-xs rounded-full border select-none text-textPrimary dark:text-textSecondary ${TECH_COLORS[tech]}`}
             >
               {" "}
               {tech}

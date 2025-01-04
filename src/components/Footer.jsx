@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { MdAlternateEmail } from "react-icons/md";
 
 const Footer = () => {
@@ -10,12 +9,12 @@ const Footer = () => {
           © {new Date().getFullYear()} Terry Ward. All rights reserved.
         </p>
         <div className="flex">
-          <Link
-            to="mailto:tward5824@gmail.com"
+          <a
+            href="mailto:tward5824@gmail.com"
             className="text-xs md:text-sm lg:text-base py-2 px-3 rounded-lg bg-accent hover:bg-accentTwo transition-all duration-300 ease-linear flex items-center justify-center gap-2"
           >
             <MdAlternateEmail /> Email Me
-          </Link>
+          </a>
         </div>
       </div>
     </footer>

@@ -4,7 +4,7 @@ import projectsData from "../data/projects";
 
 const Projects = () => {
   return (
-    <section className="max-w-7xl mt-24 mx-auto px-4 py-8">
+    <section className="max-w-7xl mx-auto px-4 py-8" id="projects">
       <h2 className="text-3xl font-bold text-accent text-center mb-8">
         My Projects
       </h2>

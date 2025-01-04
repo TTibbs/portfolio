@@ -4,6 +4,7 @@ export default {
   darkMode: "class",
   theme: {
     extend: {
+      scrollBehavior: ["smooth"],
       colors: {
         textPrimary: "var(--text-primary)",
         textSecondary: "var(--text-secondary)",

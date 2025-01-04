@@ -1,5 +1,4 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
@@ -9,36 +8,13 @@ import { SpeedInsights } from "@vercel/speed-insights/react";
 
 function App() {
   return (
-    <>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <Layout>
-              <Home />
-            </Layout>
-          }
-        />
-        <Route
-          path="/projects"
-          element={
-            <Layout>
-              <Projects />
-            </Layout>
-          }
-        />
-        <Route
-          path="/contact"
-          element={
-            <Layout>
-              <Contact />
-            </Layout>
-          }
-        />
-      </Routes>
+    <Layout>
+      <Home />
+      <Projects />
+      <Contact />
       <Analytics />
       <SpeedInsights />
-    </>
+    </Layout>
   );
 }
 

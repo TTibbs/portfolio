@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { SiCodewars } from "react-icons/si";
 
@@ -16,30 +15,30 @@ const About = () => {
         Junior Full-Stack Developer
       </p>
       <div className="flex space-x-4 mt-5">
-        <Link
-          to="https://github.com/TTibbs"
+        <a
+          href="https://github.com/TTibbs"
           className="hover:text-accentTwo"
           target="_blank"
           rel="noopener noreferrer"
         >
           <FaGithub size={35} />
-        </Link>
-        <Link
-          to="https://www.linkedin.com/in/terry-www/"
+        </a>
+        <a
+          href="https://www.linkedin.com/in/terry-www/"
           className="hover:text-accentTwo"
           target="_blank"
           rel="noopener noreferrer"
         >
           <FaLinkedin size={35} />
-        </Link>
-        <Link
-          to="https://www.codewars.com/users/TTibbs"
+        </a>
+        <a
+          href="https://www.codewars.com/users/TTibbs"
           className="hover:text-accentTwo"
           target="_blank"
           rel="noopener noreferrer"
         >
           <SiCodewars size={35} />
-        </Link>
+        </a>
       </div>
     </section>
   );
