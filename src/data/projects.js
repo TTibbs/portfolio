@@ -103,21 +103,13 @@ const projectData = [
     ],
   },
   {
-    name: "Express-PostgreSQL Scaffold",
+    name: "Quick Ex DB",
     description:
-      "An npm package for scaffolding an Express server with PostgreSQL database integration. It creates a full project structure with configuration files, API routes, database setup scripts, and testing setup.",
-    github_url: "https://github.com/TTibbs/create-expg-app",
-    live_url: null,
-    created_at: "2025-01-04T03:47:00Z",
-    technologies: [
-      "Node",
-      "Git",
-      "Express",
-      "PostgreSQL",
-      "JavaScript",
-      "Jest",
-      "Supertest",
-    ],
+      "An npm package for scaffolding Express servers with different databases.",
+    github_url: "https://github.com/TTibbs/quick-ex-db",
+    live_url: "https://quick-ex-db-fe.vercel.app/",
+    created_at: "2025-01-11T22:52:00Z",
+    technologies: ["Node", "Git", "JavaScript", "TypeScript", "Express", "CLI"],
   },
 ];
 
