@@ -103,11 +103,11 @@ const projectData = [
     ],
   },
   {
-    name: "Quick Ex DB",
+    name: "Create MVC Server",
     description:
-      "An npm package for scaffolding Express servers with different databases.",
-    github_url: "https://github.com/TTibbs/quick-ex-db",
-    live_url: "https://quick-ex-db-fe.vercel.app/",
+      "An CLI tool for scaffolding a Node.js server with an MVC architecture.",
+    github_url: "https://github.com/TTibbs/create-mvc-server",
+    live_url: "https://create-mvc-server.vercel.app/",
     created_at: "2025-01-11T22:52:00Z",
     technologies: ["Node", "Git", "JavaScript", "TypeScript", "Express", "CLI"],
   },
